@@ -1,5 +1,6 @@
 # Filter
 
+[**Filter**](https://cs50.harvard.edu/x/2024/psets/4/filter/less/#filter)
 
 ## Description
 
@@ -25,98 +26,23 @@ Filter is a C program designed to apply various effects to BMP images. Each imag
     - **Bitmap Data:** An array of bytes where each set of three bytes represents a pixel's color in BGR (Blue, Green, Red) format.
   - **Example of a 24-bit Smiley BMP:**
   
-    <table>
-      <tr>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-      </tr>
-      <tr>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-      </tr>
-      <tr>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-      </tr>
-      <tr>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-      </tr>
-      <tr>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-      </tr>
-      <tr>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-      </tr>
-      <tr>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-      </tr>
-      <tr>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-      </tr>
-      <tr>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:red">0000ff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-        <td><span style="color:black">ffffff</span></td>
-      </tr>
-    </table>
+    ```c
+    ffffff ffffff 0000ff 0000ff 0000ff 0000ff ffffff ffffff
+
+    ffffff 0000ff ffffff ffffff ffffff ffffff 0000ff ffffff
+
+    0000ff ffffff 0000ff ffffff ffffff 0000ff ffffff 0000ff
+
+    0000ff ffffff ffffff ffffff ffffff ffffff ffffff 0000ff
+
+    0000ff ffffff 0000ff ffffff ffffff 0000ff ffffff 0000ff
+
+    0000ff ffffff ffffff 0000ff 0000ff ffffff ffffff 0000ff
+
+    ffffff 0000ff ffffff ffffff ffffff ffffff 0000ff ffffff
+
+    ffffff ffffff 0000ff 0000ff 0000ff 0000ff ffffff ffffff
+    ```
 
 ## What Does It Mean to Filter an Image?
 
